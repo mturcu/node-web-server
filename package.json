@@ -1,6 +1,10 @@
 {
   "name": "node-web-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.1.0",
+    "npm": "6.0.1"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
