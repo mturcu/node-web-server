@@ -3,6 +3,7 @@ const express = require('express'),
       fs = require('fs');
 
 const app = express(),
+      heroku = 'https://guarded-cove-99806.herokuapp.com';
       port = process.env.PORT || 3000,
       logFile = 'server.log';
 
@@ -47,7 +48,14 @@ app.get('/about', (req, res) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome!',
+    welcomeMessage: 'Welcome!'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    url: heroku
   });
 });
 
