@@ -3,7 +3,7 @@ const express = require('express'),
       fs = require('fs');
 
 const app = express(),
-      port = 3000,
+      port = process.env.PORT || 3000,
       logFile = 'server.log';
 
 app.set('view engine', 'hbs');
