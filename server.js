@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Bad request',
-    errorCode: 404
+    errorCode: 400
   });
 });
 
